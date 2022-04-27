@@ -68,7 +68,7 @@ def main():
     """
 
     baseurl = 'https://api.github.com/users'
-    tailurl = 'repos?type=all&per_page=100'
+    tailurl = 'repos?type=all&per_page=10000'
     githubrepo = '{}/{}/{}'.format(baseurl, USERNAME, tailurl)
     response = requests.get(githubrepo)
     repolist = response.json()
