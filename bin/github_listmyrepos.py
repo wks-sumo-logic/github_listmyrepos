@@ -24,7 +24,6 @@ __author__ = "Wayne Schmidt (wschmidt@sumologic.com)"
 
 ### import os
 import sys
-import time
 import datetime
 import argparse
 import requests
@@ -49,10 +48,10 @@ RESOURCE = ARGS.RESOURCE
 try:
     USERNAME = ARGS.USERNAME
 except KeyError as myerror:
-    print('Environment Variable Not Set :: {} '.format(myerror.args[0]))
+    print(f'Environment Variable Not Set :: {myerror.args[0]}')
     sys.exit()
 
-REPOLIST = dict()
+REPOLIST = {}
 
 RIGHTNOW = datetime.datetime.now()
 
@@ -69,15 +68,13 @@ def main():
 
     baseurl = 'https://api.github.com/users'
     tailurl = 'repos?type=all&per_page=10000'
-    githubrepo = '{}/{}/{}'.format(baseurl, USERNAME, tailurl)
+    githubrepo = f'{baseurl}/{USERNAME}/{tailurl}'
     response = requests.get(githubrepo)
     repolist = response.json()
     for repo in repolist:
         repourl = repo[ARGS.RESOURCE]
         reponame = repourl.split('/')[-1]
-        print('| [{}]({}) |'.format(reponame, repourl))
-
-
+        print(f'| [{reponame}]({repourl}) |')
 
 if __name__ == '__main__':
     main()
