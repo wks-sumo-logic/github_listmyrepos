@@ -70,7 +70,7 @@ Examples and How to Use the Scripts
           ./bin/github_listmyrepos.py -h
 
     2. Specify Github account
-          ./bin/github_listmyrepos.py -u wks-sumo-logic
+          ./bin/github_listmyrepos.py -u wayne-kirk-schmidt
 
 License
 =======
@@ -96,8 +96,6 @@ Support
 =======
 
 Feel free to e-mail me with issues to: 
-
-+ wschmidt@sumologic.com
 
 + wayne.kirk.schmidt@gmail.com
 

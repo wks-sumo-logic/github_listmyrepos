@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Exaplanation: github_listmyrepos.py. enumerate all of your repositories
+Exaplanation: github_listmyrepos.py. list all of your Github repositories!
 
 Usage:
    $ python  github_listmyrepos.py [ options ]
@@ -14,13 +14,13 @@ Style:
     @name           github_listmyrepos.py
     @version        1.00
     @author-name    Wayne Schmidt
-    @author-email   wschmidt@sumologic.com
+    @author-email   wayne.kirk.schmidt@gmail.com
     @license-name   Apache 2.0
     @license-url    https://www.apache.org/licenses/LICENSE-2.0
 """
 
 __version__ = 1.00
-__author__ = "Wayne Schmidt (wschmidt@sumologic.com)"
+__author__ = "Wayne Schmidt (wayne.kirk.schmidt@gmail.com)"
 
 ### import os
 import sys
@@ -30,6 +30,7 @@ import requests
 sys.dont_write_bytecode = 1
 
 MY_CFG = 'undefined'
+
 PARSER = argparse.ArgumentParser(description="""
 
 github_listmyrepos.py displays info on all Github repositories you have.
